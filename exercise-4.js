@@ -1,11 +1,7 @@
 //Create the function `nicknameMap` using the for loop, which takes in an array of people and returns a `nicknames` array. The nickname must be composed as follows: `<name>-<age>`.
 
 function nicknameMap(persons) {
-  const nicknames = [];
-  for (let person of persons) {
-    const nickname = person.name +"-"+ person.age;
-    nicknames.push(nickname);
-  }
+  const nicknames = persons.map(person => person.name+"-"+person.age);
   return nicknames;
 }
 
@@ -22,6 +18,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const nicknames = nicknameMap(persons);
+let nicknames = nicknameMap(persons);
 console.log(persons);
 console.log(nicknames);
