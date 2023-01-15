@@ -2,8 +2,7 @@
 
 function nicknameMap(persons) {
   const nicknames = [];
-  for (let i = 0; i < persons.length; i++) {
-    const person = persons[i];
+  for (let person of persons) {
     const nickname = person.name +"-"+ person.age;
     nicknames.push(nickname);
   }
