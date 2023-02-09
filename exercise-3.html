@@ -20,9 +20,15 @@
 </html>
 
 <script>
+  console.log("Method 1");
   const labels = document.getElementsByTagName('label');
   const inputs = document.getElementsByClassName('form-input');
   for(let i = 0; i < labels.length; i++) {
     console.log(labels[i].innerText, inputs[i].value)
   }
+  console.log("Method 2");
+  const inputs2 = document.getElementsByClassName('form-input');
+  Array.from(inputs2).forEach(input => {
+    console.log(input.previousElementSibling.innerText, input.value)
+  })
 </script>
